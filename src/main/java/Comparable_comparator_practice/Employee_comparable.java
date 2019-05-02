@@ -1,7 +1,11 @@
 package Comparable_comparator_practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
+
+
 
 class Human implements Comparable<Human> {
 	String Race;
@@ -63,5 +67,24 @@ public class Employee_comparable {
 			System.out.println(str.firstName + " " + str.lastName + " " + "Book: " + str.bookName + " " + str.age + " "
 					+ str.Race);
 		}
+		
+		System.out.println("************Sorting objects****************");
+		ArrayList<Human> al1 = new ArrayList<Human>();
+		al1.add(new Human("Turks"));
+		al1.add(new Human("Hindi"));
+		al1.add(new Human("Bongs"));
+		al1.add(new Human("Afgan"));
+		al1.add(new Human("Hun"));
+		Collections.sort(al1);
+		for (Human str : al1) {
+			System.out.println(str.Race);
+		}
+		
+		
+		System.out.println("***************Sorting List*************");
+		List<String> al3 = Arrays.asList("Sumit","Ghosh","Alpha","Beta");
+		Collections.sort(al3);
+		System.out.println(al3);
+		
 	}
 }
