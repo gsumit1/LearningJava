@@ -15,7 +15,7 @@ class Result {
 
 		Integer[] s = getPartition(items, 0, items.length - 1);
 
-		@SuppressWarnings("unchecked")
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		Map<Integer, Integer> temp = new LinkedHashMap();
 
 		for (int a : s) {

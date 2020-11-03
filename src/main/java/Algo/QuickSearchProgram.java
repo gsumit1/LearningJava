@@ -1,9 +1,6 @@
 package Algo;
 
 import java.util.Arrays;
-
-import javax.swing.plaf.synth.SynthStyle;
-
 public class QuickSearchProgram {
 	
 	

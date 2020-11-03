@@ -1,5 +1,3 @@
-
-//Complete this code or write your own from scratch
 import java.util.*;
 class DictionariesMaps {
 	public static void main(String[] argh) {
