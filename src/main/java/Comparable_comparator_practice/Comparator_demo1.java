@@ -1,8 +1,6 @@
 package Comparable_comparator_practice;
 
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 
 //A class to represent a Student1. 
 class Student1 {
@@ -27,9 +25,13 @@ class Student1 {
 }
 
 class Sortbyroll11 implements Comparator<Student1> {
-	public int compare(Student1 a, Student1 b) {
-		return a.rollno - b.rollno;
+
+	@Override
+	public int compare(Student1 o1, Student1 o2) {
+		// TODO Auto-generated method stub
+		return o1.rollno-o2.rollno;
 	}
+	
 }
 
 class Sortbyname1 implements Comparator<Student1> {

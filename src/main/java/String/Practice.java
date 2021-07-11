@@ -37,6 +37,9 @@ public class Practice {
 		StringBuilder sb=new StringBuilder(s);
 		System.out.println(sb.reverse());
 		
+		String a="abc";
+		System.out.println(a.compareTo("abd"));
+		
 		
 	}
 
