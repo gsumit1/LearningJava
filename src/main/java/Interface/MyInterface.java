@@ -19,7 +19,7 @@ public interface MyInterface {
 	equals().*/
 	
 	int i=5;
-	String myDetails(String name);
+	String myDetails(String name) throws Exception;
 	
 	String myDetails1(String name);
 
