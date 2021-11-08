@@ -1,57 +1,41 @@
 package temp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Sherlock {
 
 	public static void main(String arg[]) {
 
-		String s = "cdcd";
+		String s = "KKKK";
 
-		char[] a = s.toCharArray();
+		HashMap<String, Integer> f = new HashMap<String, Integer>();
+		int pair = 0;
 
-		String key="";
-		
-		HashMap<String, List<String>> h=new HashMap<String,List<String>>();
-		for (int i = 0; i < a.length; i++) {
-			
-			
-			key=key+a[i];
-			
-			getCount(key,s);
-			
-			
-
-		}
-
-	}
-
-	static void getCount(String key, String parent) {
-		
-		int l=key.length();
-		
-		char[] c=parent.toCharArray();
-		
-		int count=0;
-		
-		for(int i=1; i<c.length; i++) {
-			
-			if(l==1) {
-				if(key==c[i]) {
-					
+		for (int i = 0; i < s.length(); i++) {
+			for (int j = 0; j < s.length(); j++) {
+				try {
+					StringBuffer t = new StringBuffer(s.substring(j, j + i));
+					char[] p = t.toString().toCharArray();
+					Arrays.sort(p);
+					String ss = String.valueOf(p).toString();
+					if (!f.containsKey(ss)) {
+						if (!t.toString().isEmpty())
+							f.put(ss, 0);
+					}
+					int count = f.get(ss) + 1;
+					f.put(ss, count);
+				} catch (Exception e) {
 				}
 			}
-			
-			
-			
 		}
-		
-		
-		
-		
-		
-
+		for (Entry<String, Integer> v : f.entrySet()) {
+			pair = pair + v.getValue() * (v.getValue() - 1) / 2;
+		}
 	}
-
 }
